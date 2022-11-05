@@ -1,0 +1,68 @@
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0 5px 8px 0px;
+	border-bottom: 1px solid gray;
+	outline: none;
+	color: $black;
+	cursor: pointer;
+
+	&:focus {
+		border-color: green;
+
+		&~.form__label {
+			display: block;
+		}
+
+		&~.form-popup__label {
+			display: block;
+		}
+	}
+
+	&::placeholder {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 114%;
+		color: gray;
+	}
+
+	&.error {
+		border-color: #FF2116;
+		color: #FF2116;
+
+		&:focus {
+			&~.form__label {
+				display: none;
+			}
+
+			&~.form-popup__label {
+				display: none;
+			}
+		}
+
+		&::placeholder {
+			color: #FF2116;
+		}
+	}
+}
+
+
+
+textarea.input {
+	resize: none;
+	padding: 15px;
+	height: 145px;
+}
+
+//</INPUT>====================================================================================================

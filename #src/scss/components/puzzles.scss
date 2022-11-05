@@ -1,0 +1,298 @@
+.puzzles {
+
+	&__row {
+		background-color: $gray-light-03;
+
+		&:nth-child(2n) {
+			background-color: $gray-light-00;
+		}
+	}
+
+	&__container {
+
+		@media (max-width:($md2+px)) {
+			padding: 0;
+		}
+
+		@media (max-width:($md3+px)) {
+			padding: 0;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@media (max-width:($md3+px)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width:($md4+px)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		display: flex;
+		height: 192px;
+
+		@media (max-width:($md4+px)) {
+			height: auto;
+
+			&:first-child {
+				height: 192px;
+			}
+		}
+
+		&_none {
+			@media (max-width:($md4+px)) {
+				display: none;
+			}
+		}
+
+		&_order {
+
+			&:nth-child(1) {
+				@media (max-width:($md3+px)) {
+					order: 2;
+				}
+
+				@media (max-width:($md4+px)) {
+					height: auto;
+				}
+			}
+
+			&:nth-child(2) {
+				@media (max-width:($md3+px)) {
+					order: 1;
+
+				}
+
+				@media (max-width:($md4+px)) {
+					display: none;
+				}
+			}
+
+			&:nth-child(3) {
+				@media (max-width:($md3+px)) {
+					order: 4;
+
+				}
+
+				@media (max-width:($md4+px)) {
+					display: none;
+				}
+			}
+
+			&:nth-child(4) {
+				@media (max-width:($md3+px)) {
+					order: 3;
+
+				}
+			}
+		}
+	}
+
+	&__images {
+		position: relative;
+		flex: 0 0 100%;
+		overflow: hidden;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0px 0px 192px 0px;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 1.5s ease 0s;
+		overflow: hidden;
+
+		img {
+			transition: transform 3s ease 0s;
+		}
+
+		&_width-1 {
+			width: calc(100% - 50px);
+
+			@media (max-width:($md1+px)) {
+				width: calc(100% - 12.75px);
+			}
+
+			@media (max-width:($md3+px)) {
+				width: calc(100% - 111px);
+			}
+
+		}
+
+		&_width-2 {
+			width: calc(100% - 37px);
+
+			@media (max-width:($md1+px)) {
+				width: calc(100% - 17.75px);
+			}
+
+			@media (max-width:($md3+px)) {
+				width: calc(100% - 112px);
+			}
+		}
+
+		&_width-4 {
+			width: calc(100% - 106px);
+
+			@media (max-width:($md1+px)) {
+				width: calc(100% - 28.75px);
+			}
+
+			@media (max-width:($md3+px)) {
+				width: calc(100% - 114px);
+			}
+		}
+
+		&.show {
+			opacity: 1;
+
+			img {
+				transform: scale(1.03);
+			}
+
+		}
+	}
+
+	&__links {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width:($md4+px)) {
+			border-top: 1px solid $gray-light-00;
+		}
+
+		&_border {
+			@media (max-width:($md4+px)) {
+				border-top: none;
+			}
+		}
+	}
+
+	&__link-btn {
+		background-color: $gray-light-03;
+		flex: 1 1 auto;
+		display: block;
+		width: 100%;
+		padding: 0 30px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-weight: 300;
+		font-size: 19px;
+		line-height: 100%;
+		color: $black;
+		overflow: hidden;
+
+		&:not(:first-child) {
+			border-top: 1px solid $gray-light-00;
+		}
+
+		@media (max-width:($md4+px)) {
+			height: 107px;
+		}
+
+		span {
+			display: block;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+
+			&::after {
+				@extend %hover;
+				background: linear-gradient(270deg, rgba(230, 235, 248, 0) 0%, #E6EBF8 55.31%, rgba(230, 235, 248, 0) 100%);
+			}
+
+			&.icon-arrow {
+				width: auto;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				transition: transform 0.4s linear 0s;
+
+				&::after {
+					width: 200%;
+				}
+			}
+		}
+
+		&_color {
+			background-color: $gray-light-00;
+
+			span {
+				&::after {
+					background: linear-gradient(270deg, rgba(248, 250, 255, 0) 0%, #F8FAFF 55.31%, rgba(248, 250, 255, 0) 100%);
+				}
+			}
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				.icon-arrow {
+					transform: translateX(5px);
+				}
+
+				span {
+					&::after {
+						left: 100%;
+					}
+				}
+
+			}
+		}
+	}
+
+	&__rectangle-orange {
+		flex: 0 0 50px;
+		background-color: $yellow;
+
+		@media (max-width:($md1+px)) {
+			flex: 0 0 12.5px;
+		}
+
+		@media (max-width:($md3+px)) {
+			flex: 0 0 111px;
+		}
+	}
+
+	&__rectangle-blue {
+		flex: 0 0 37px;
+		background-color: $blue-02;
+
+		@media (max-width:($md1+px)) {
+			flex: 0 0 17.75px;
+		}
+
+		@media (max-width:($md3+px)) {
+			flex: 0 0 112px;
+		}
+	}
+
+	&__rectangle-red {
+		flex: 0 0 106px;
+		background: #E26460;
+
+		@media (max-width:($md1+px)) {
+			flex: 0 0 28.75px;
+		}
+
+		@media (max-width:($md3+px)) {
+			flex: 0 0 114px;
+		}
+	}
+}
+
+.container {}
+
+.icon-arrow {}

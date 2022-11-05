@@ -1,0 +1,35 @@
+.title {
+	h1 {
+		font-size: 46px;
+		line-height: 100%;
+		letter-spacing: -0.02em;
+
+		@media (max-width:($md1+px)) {
+			font-size: 38px;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 30px;
+		}
+	}
+
+	h2 {
+		font-size: 34px;
+		line-height: 105%;
+		letter-spacing: -0.02em;
+		padding: 0px 0px 20px 0px;
+
+		@media (max-width:($md4+px)) {
+			font-size: 26px;
+			padding: 0px 0px 15px 0px;
+		}
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 110%;
+		padding: 15px 0 10px 0;
+	}
+}
+
+.text {}

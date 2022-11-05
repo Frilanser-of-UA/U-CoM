@@ -1,0 +1,52 @@
+.hero-wrap {
+	@extend %pad-100;
+
+	&__container {}
+
+	&__body {
+		display: flex;
+		align-items: center;
+
+		@media (max-width:($md2+px)) {
+			display: block;
+		}
+	}
+
+	&__left {
+		flex: 0 1 585px;
+		margin: 0px 30px 0px 0px;
+	}
+
+	&__title {
+		margin: 0px 0px 15px 0px;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 120%;
+		color: $gray-01;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 18px;
+		}
+	}
+
+	&__right {
+		flex: 0 1 585px;
+	}
+
+	&__item {
+		text-align: center;
+
+		@media (max-width:($md2+px)) {
+			text-align: right;
+		}
+	}
+
+	&__btn {}
+}

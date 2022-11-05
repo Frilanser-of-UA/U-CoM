@@ -1,0 +1,144 @@
+.links {
+	@extend %pad-100;
+	background-color: $blue;
+
+	&__container {}
+
+	&__body {}
+
+	&__title {
+		text-align: center;
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 20px 0px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width:($md2+px)) {
+			flex-wrap: wrap;
+			margin: 0px 0px -10px 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__column {
+		display: inline-flex;
+
+		&:not(:last-child) {
+			margin: 0px 10px 0px 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			flex: 1 1 auto;
+			justify-content: flex-end;
+		}
+
+		@media (max-width:($md3+px)) {
+			display: block;
+			flex: 0 0 auto;
+		}
+	}
+
+	&__item {
+		flex: 0 0 220px;
+		height: 220px;
+		width: 220px;
+		border-radius: 50%;
+
+		&:not(:last-child) {
+			margin: 0px 10px 0px 0px;
+
+			@media (max-width:($md2+px)) {
+				margin: 0px auto 10px 0px;
+			}
+		}
+
+		&:last-child {
+			@media (max-width:($md2+px)) {
+				margin-bottom: 10px;
+			}
+		}
+
+		@media (max-width:($md2+px)) {
+			flex: 0 0 190px;
+			height: 190px;
+			width: 190px;
+		}
+	}
+
+	&__link {
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: $black;
+		padding: 0 19px;
+		font-size: 18px;
+		line-height: 110%;
+
+		@media (max-width:($md2+px)) {
+			font-size: 16px;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				span {
+					&::before {
+						left: 100%;
+					}
+				}
+			}
+		}
+
+		&_black {
+			background-color: $black;
+			color: $white-100;
+
+			span {
+				&::before {
+					background: linear-gradient(270deg, rgba(14, 40, 61, 0) 0%, #0E283D 48.42%, rgba(14, 40, 61, 0) 100%);
+				}
+			}
+		}
+
+		&_yellow {
+			background-color: $yellow;
+
+			span {
+				&::before {
+					background: linear-gradient(270deg, rgba(252, 180, 87, 0) 0%, #FCB457 48.42%, rgba(252, 180, 87, 0) 100%);
+				}
+			}
+		}
+
+		&_white {
+			background-color: $gray-light-00;
+
+			span {
+				&::before {
+					background: linear-gradient(270deg, rgba(248, 250, 255, 0) 0%, #F8FAFF 48.42%, rgba(248, 250, 255, 0) 100%);
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				@extend %hover;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],
+[class*="icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+		font-size: 24px;
+	}
+}
+
+
+
+.icon-arrow:before {
+	content: "\e900";
+}
+
+.icon-arrow-btn:before {
+	content: "\e901";
+}
+
+.icon-arrow-down:before {
+	content: "\e902";
+}
+
+.icon-check:before {
+	content: "\e903";
+}
+
+.icon-cloze:before {
+	content: "\e904";
+}
+
+.icon-download:before {
+	content: "\e905";
+}
+
+.icon-facebook:before {
+	content: "\e906";
+}
+
+.icon-instagram:before {
+	content: "\e907";
+}
+
+.icon-link:before {
+	content: "\e908";
+}
+
+.icon-mark:before {
+	content: "\e909";
+}
+
+.icon-owl:before {
+	content: "\e90a";
+}
+
+.icon-telegram:before {
+	content: "\e90b";
+}
+
+.icon-user:before {
+	content: "\e90c";
+}
+
+.icon-youtube:before {
+	content: "\e90d";
+}
