@@ -4,25 +4,41 @@
 			<a href="#" target="_blank" class="header__logo"><img src="img/header/logo.svg" alt="Лого"></a>
 			<div class="header__menu menu">
 				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="#" target="_blank" class="menu__link">Головна</a></li>
-						<li class="menu__item"><a href="#" target="_blank" class="menu__link">Електроенергія</a>
-							<span class=" menu__arrow icon-arrow-down"></span>
-							<ul class="menu__sublist">
-								<li class="menu__subitem"><a href="#" target="_blank" class="menu__sublink">Підпункт</a></li>
-							</ul>
+					<ul class="menu__list" data-spollers="990,max" data-one-spoller>
+						<li class="menu__item"><a href="#" target="_blank" class="menu__link"><span class="menu__label">Головна</span></a></li>
+						<li class="menu__item">
+							<div class="menu__link" data-spoller><span class="menu__label">Електроенергія</span><span class=" menu__arrow icon-arrow-down"></span></div>
+							<div class="menu__dropdown dropdown">
+								<ul class="dropdown__sublist">
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Електроенергія</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Врегулювання спорів</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Нормативна база</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Про вплив на довкілля</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Архив таріфів</a></li>
+								</ul>
+							</div>
 						</li>
-						<li class="menu__item"><a href="#" target="_blank" class="menu__link">Природний газ</a>
-							<span class=" menu__arrow icon-arrow-down"></span>
-							<ul class="menu__sublist">
-								<li class="menu__subitem"><a href="#" target="_blank" class="menu__sublink">Підпункт</a></li>
-							</ul>
+						<li class="menu__item">
+							<div class="menu__link" data-spoller><span class="menu__label">Природний газ</span><span class=" menu__arrow icon-arrow-down"></span></div>
+							<div class="menu__dropdown dropdown">
+								<ul class="dropdown__sublist">
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Природний газ</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Врегулювання спорів</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Нормативна база</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Архив таріфів (якщо буде контент)</a></li>
+								</ul>
+							</div>
 						</li>
-						<li class="menu__item"><a href="#" target="_blank" class="menu__link">Про компанію</a>
-							<span class=" menu__arrow icon-arrow-down"></span>
-							<ul class="menu__sublist">
-								<li class="menu__subitem"><a href="#" target="_blank" class="menu__sublink">Підпункт</a></li>
-							</ul>
+						<li class="menu__item">
+							<div class="menu__link" data-spoller><span class="menu__label">Про компанію</span><span class=" menu__arrow icon-arrow-down"></span></div>
+							<div class="menu__dropdown dropdown">
+								<ul class="dropdown__sublist">
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Про компанію</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Наші партнери</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">НЧасті запитання</a></li>
+									<li class="dropdown__subitem"><a href="#" target="_blank" class="dropdown__sublink">Контакти</a></li>
+								</ul>
+							</div>
 						</li>
 					</ul>
 				</nav>
@@ -33,9 +49,7 @@
 					<span class="user__icon icon-user"></span>
 				</a>
 			</div>
-			<button class="icon-menu">
-				<!-- <img src="img/icons/burger.svg" alt="burger"> -->
-			</button>
+			<button class="icon-menu"><span></span><span></span><span></span></button>
 		</div>
 	</div>
 </header>

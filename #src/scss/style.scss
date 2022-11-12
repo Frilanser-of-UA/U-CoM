@@ -42,6 +42,7 @@ $gray-sep: #D3DAE9;
 
 $white-100: #FFFFFF;
 $yellow: #FCB457;
+$red: #F9928F;
 $blue-02: #8AC1EA;
 
 $text-link: #197FCC;
@@ -68,12 +69,7 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 
 	&._loaded {}
@@ -110,6 +106,8 @@ body {
 @import "./components/header";
 @import "./components/footer";
 @import "./pages/home";
+@import "./pages/electricyti";
+@import "./pages/about";
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -118,7 +116,7 @@ body {
 	flex: 1 1 auto;
 }
 
-//===================================================================================================================================
+//====================Шаблоны кода===============================================================================================================
 %pad-100 {
 	padding: 100px 0;
 

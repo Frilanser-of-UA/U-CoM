@@ -1,0 +1,40 @@
+.accordeon-img {
+	@extend %pad-100;
+	background-color: $gray-light-00;
+	// .accordeon-img__conteiner
+
+	&__conteiner {}
+
+	// .accordeon-img__body
+
+	&__body {
+		min-height: 620px;
+		position: relative;
+
+		@media (max-width:($md1+px)) {
+			min-height: 559px;
+		}
+
+		@media (max-width:($md2+px)) {
+			min-height: auto;
+		}
+	}
+
+	// .accordeon-img__right
+
+	&__right {
+		max-width: 380px;
+
+		@media (max-width:($md1+px)) {
+			max-width: 277px;
+		}
+
+		@media (max-width:($md2+px)) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {}
+
+	&__spollers {}
+}

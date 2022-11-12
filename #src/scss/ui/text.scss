@@ -1,0 +1,39 @@
+.text {
+	line-height: 125%;
+	color: $gray-01;
+	width: 100%;
+
+	p {
+		padding: 0px 0px 10px 0px;
+	}
+
+	&_italic {
+		font-style: italic;
+
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+
+	}
+}
+
+.text-bold {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 125%;
+	color: $black;
+
+	p {
+		padding: 0px 0px 10px 0px;
+	}
+}
+
+.text-link {
+	padding: 0px 0px 10px 0px;
+	line-height: 125%;
+	text-decoration: underline;
+	color: $text-link;
+	display: block;
+}

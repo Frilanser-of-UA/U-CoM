@@ -53,6 +53,10 @@
 		border-radius: 50%;
 		background-color: $yellow;
 
+		&.blue {
+			background-color: $blue;
+		}
+
 		&::before {
 			font-size: 30px;
 			transition: transform 0.7s linear 0s;
@@ -74,6 +78,11 @@
 	display: inline-block;
 	position: relative;
 	transition: color 0.3s ease 0s;
+	white-space: nowrap;
+
+	&_size {
+		font-size: 14px;
+	}
 
 	&::before {
 		content: '';
@@ -97,4 +106,124 @@
 	}
 }
 
-.btn {}
+.btn {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	height: 58px;
+	padding: 10px 15px;
+	color: $gray-01;
+	border: 1px solid $gray-sep;
+	border-radius: 43px;
+	transition: all 0.3s ease-out 0s;
+	text-align: center;
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: $black;
+			border-color: $gray-01 ;
+		}
+	}
+
+	&::before {
+		margin: 0px 0px 0px 10px;
+	}
+
+	&_gray-l {
+		border: none;
+		background-color: $gray-light-01;
+	}
+
+	&_yellow {
+		border: none;
+		background-color: $yellow;
+		color: $black;
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $white-100;
+				background-color: $black;
+			}
+		}
+	}
+
+	&_blue {
+		border: none;
+		background-color: $blue;
+		color: $black;
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $white-100;
+				background-color: $black;
+			}
+		}
+	}
+}
+
+.btn-min {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	padding: 5px 15px;
+	font-size: 14px;
+	color: $gray-01;
+	border: 1px solid $gray-sep;
+	border-radius: 43px;
+	transition: all 0.3s ease-out 0s;
+	text-align: center;
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: $black;
+			border-color: $gray-01 ;
+		}
+	}
+
+	&::before {
+		margin: 0px 0px 0px 5px;
+		font-size: 20px;
+	}
+
+	&_gray-l {
+		border: none;
+		background-color: $gray-light-01;
+	}
+
+	&_yellow {
+		border: none;
+		background-color: $yellow;
+		color: $black;
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $white-100;
+				background-color: $black;
+			}
+		}
+	}
+
+	&_blue {
+		border: none;
+		background-color: $blue;
+		color: $black;
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $white-100;
+				background-color: $black;
+			}
+		}
+	}
+}

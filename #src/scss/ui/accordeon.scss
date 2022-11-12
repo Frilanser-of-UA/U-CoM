@@ -1,0 +1,135 @@
+.spollers-acordeon {
+	&__label {
+		h3 {
+			padding-top: 0;
+		}
+	}
+
+	&__item {}
+
+	&__title {
+		font-size: 18px;
+		line-height: 110%;
+		padding: 15px 0;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		border-top: 1px solid $gray-sep;
+		transition: padding 0.5s linear 0s;
+
+		@media (any-hover:hover) {
+			&:hover {
+				span {
+					color: $black;
+				}
+			}
+		}
+
+		&.active {
+			padding-bottom: 7px;
+
+			&::before {
+				width: 100%;
+			}
+
+			span {
+				transform: matrix(1, 0, 0, -1, 0, 0);
+			}
+		}
+
+		&::before {
+			content: '';
+			background-color: $yellow;
+			position: absolute;
+			width: 1px;
+			height: 2px;
+			top: -1px;
+			left: 0;
+			transition: width 0.4s linear 0s;
+		}
+
+		&.blue {
+			&::before {
+				background-color: $blue;
+			}
+		}
+
+		span {
+			color: $gray-01;
+			transition: transform 0.4s ease 0s, color 0.4s ease 0s;
+			margin: 0px 0px 0px 15px;
+		}
+	}
+
+	// .spollers-acordeon__body
+
+	&__body {
+		padding: 0px 0px 10px 0px;
+
+		&._slide {
+			.spollers-acordeon__img-show {
+				@media (min-width:($md2+px)) {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&__img-show {
+		width: 60%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0px 0px 0px 100px;
+		opacity: 1;
+		transition: opacity 0.6s ease 0s;
+
+		@media (min-width:($md2+px)) {
+			animation-duration: 8s;
+			animation-timing-function: linear;
+			animation-name: animation-img;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-play-state: running;
+
+			@keyframes animation-img {
+				0% {
+					transform: translateX(-5%);
+				}
+
+				50% {
+					transform: translateX(-2.5%);
+				}
+
+				100% {
+					transform: translateX(0%);
+				}
+			}
+		}
+
+
+		@media (max-width:($md1+px)) {
+			margin: 0px 0px 0px 30px;
+			padding: 0 30px;
+		}
+
+		@media (max-width:($md2+px)) {
+			position: static;
+			width: 100%;
+			padding: 0 10px;
+			margin: 0;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__img {
+		padding: 0px 0px 426px 0px;
+		margin: 15px 0;
+	}
+
+	&__text {}
+}

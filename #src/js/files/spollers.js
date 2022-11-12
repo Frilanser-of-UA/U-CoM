@@ -128,23 +128,21 @@ if (spollersArray.length > 0) {
 	}
 }
 // Отключаем клик по ссылке
-document.querySelectorAll('.subspollers__link').forEach(head => {
-	head.addEventListener('click', function (e) {
-		e.stopPropagation();
-	})
-});
-document.querySelectorAll('.subsubspollers__wrapper').forEach(headWrapper => {
-	headWrapper.addEventListener('click', function (e) {
-		e.stopPropagation();
-	})
-});
+// document.querySelectorAll('.subspollers__link').forEach(head => {
+// 	head.addEventListener('click', function (e) {
+// 		e.stopPropagation();
+// 	})
+// });
+// document.querySelectorAll('.subsubspollers__wrapper').forEach(headWrapper => {
+// 	headWrapper.addEventListener('click', function (e) {
+// 		e.stopPropagation();
+// 	})
+// });
 
-document.querySelectorAll('.subsubspollers__button.disabled').forEach(buttonDisable => {
-	buttonDisable.addEventListener('click', function (e) {
-		e.stopPropagation();
-	})
-});
-
-
+// document.querySelectorAll('.subsubspollers__button.disabled').forEach(buttonDisable => {
+// 	buttonDisable.addEventListener('click', function (e) {
+// 		e.stopPropagation();
+// 	})
+// });
 
 

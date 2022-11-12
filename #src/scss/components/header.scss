@@ -1,6 +1,7 @@
 .header {
 	height: 60px;
 	border-bottom: 1px solid $gray-sep;
+	position: relative;
 
 	@media (max-width:($md1+px)) {
 		border: none;
@@ -8,6 +9,10 @@
 
 	&__container {
 		height: 100%;
+
+		@media (max-width:($md4+px)) {
+			padding: 0 10px;
+		}
 	}
 
 	&__body {
@@ -38,48 +43,77 @@
 	&__user {}
 }
 
-
 .menu {
 	margin: 0px 10px 0px 0px;
 	display: flex;
 	align-items: center;
 
-	@media (max-width:($md2+px)) {
-		display: none;
-	}
-
 	&__icon {}
 
-	&__body {}
+	&__body {
+		@media (max-width:($md2+px)) {
+			position: absolute;
+			width: 414px;
+			height: 100vh;
+			transform: translateX(105%);
+			top: 60px;
+			right: 0;
+			padding: 20px 0;
+			background-color: $white-100;
+			z-index: 10;
+			transition: transform 0.4s linear 0s;
+			overflow-y: auto;
+			border-left: 1px solid #D3DAE9;
+
+			&.active {
+				transform: translateX(0%);
+			}
+		}
+
+		@media (max-width:($md4+px)) {
+			width: 100%;
+			border: none;
+		}
+	}
 
 	&__list {
 		display: flex;
 		align-items: center;
+
+		@media (max-width:($md2+px)) {
+			display: block;
+
+		}
+
 	}
 
 	&__item {
+		position: relative;
+
 		&:not(:last-child) {
 			margin: 0px 20px 0px 0px;
-		}
 
-		position: relative;
-		display: flex;
-		align-items: center;
-		padding: 21px 0;
+			@media (max-width:($md2+px)) {
+				margin: 0px 0px 2px 0px;
+			}
+		}
 
 		@media (any-hover:hover) {
 			&:hover {
-				.menu__sublist {
-					bottom: -10px;
+				.dropdown {
+					top: calc(100% - 4px);
 					pointer-events: auto;
 					visibility: visible;
 					opacity: 1;
 				}
 
 				.menu__link {
-					&::before {
-						width: 100%;
+					span {
+						&::before {
+							width: 100%;
+						}
 					}
+
 				}
 			}
 		}
@@ -89,45 +123,153 @@
 		font-weight: 300;
 		line-height: 112%;
 		color: $black;
-		padding: 1.5px 0px 4.5px 0px;
 		position: relative;
+		cursor: pointer;
+		padding: 21px 0;
+		display: flex;
+		align-items: center;
 
-		&::before {
-			content: '';
-			height: 2px;
-			width: 1px;
-			position: absolute;
-			bottom: -3px;
-			left: 0;
-			background-color: $yellow;
-			transition: width 0.3s linear 0s;
+		@media (max-width:($md2+px)) {
+			padding: 15px 45px 15px 20px;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 90%;
+			letter-spacing: -0.02em;
+
+			&.active {
+				.menu__arrow {
+					transform: translateY(-50%) matrix(1, 0, 0, -1, 0, 0);
+				}
+			}
 		}
+	}
 
+	&__label {
+		display: block;
+
+		@media (min-width:($md2+px)) {
+			position: relative;
+			padding: 1.5px 0 4.5px 0;
+
+			&::before {
+				content: '';
+				height: 2px;
+				width: 1px;
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				background-color: $yellow;
+				transition: width 0.3s linear 0s;
+			}
+		}
 	}
 
 	&__arrow {
-		font-size: 24px;
+		@media (max-width:($md2+px)) {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			width: 24px;
+			height: 24px;
+			transform: translateY(-50%);
+			transition: transform 0.4s ease 0s;
+
+			&::before,
+			&::after {
+				content: '';
+				height: 1px;
+				background-color: $black;
+				width: 9px;
+				position: absolute;
+				top: 50%;
+			}
+
+			&::after {
+				transform: translateY(-50%) rotate(-45deg);
+				left: 10.5px;
+			}
+
+			&::before {
+				transform: translateY(-50%) rotate(45deg);
+				right: 10.5px;
+
+			}
+		}
 	}
 
-	&__sublist {
-		position: absolute;
-		bottom: -20px;
-		padding: 10px 0px 0px 0px;
-		pointer-events: none;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 0.3s ease 0s;
-
-	}
-
-	&__subitem {}
-
-	&__sublink {}
-
+	&__dropdown {}
 
 }
 
-.icon-menu {}
+.dropdown {
+	position: absolute;
+	top: 110%;
+	left: -20px;
+	z-index: 5;
+	padding: 20px 0px;
+	width: 240px;
+	background: $white-100;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.18);
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s linear 0s;
+
+	@media (max-width:($md2+px)) {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		box-shadow: none;
+		width: 100%;
+		padding: 0;
+	}
+
+	&__sublist {}
+
+	&__subitem {
+		@media (max-width:($md2+px)) {
+			&:not(:last-child) {
+				margin: 0px 0px 2px 0px;
+			}
+		}
+	}
+
+	&__sublink {
+		padding: 10px 20px;
+		display: block;
+		line-height: 112%;
+		color: $gray-01;
+		transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+
+		@media (max-width:($md2+px)) {
+			background-color: $gray-light-00;
+			padding: 10px 20px 10px 40px;
+			position: relative;
+			font-size: 18px;
+			line-height: 100%;
+
+			&::before {
+				content: '';
+				background-color: $red;
+				width: 7px;
+				height: 7px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 26px;
+				border-radius: 50%;
+			}
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $black;
+				background-color: $gray-light-01;
+			}
+		}
+	}
+}
 
 .user {
 	@media (max-width:($md2+px)) {
@@ -189,27 +331,44 @@
 		z-index: 5;
 		flex: 0 0 44px;
 		width: 44px;
+		position: relative;
 
-		&::before {
-			content: '';
-			background: url('../img/icons/burger.svg') center no-repeat;
-			width: 24px;
-			height: 24px;
+		span {
+			transition: transform 0.4s ease 0s;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			background-color: $black;
+			pointer-events: none;
+			cursor: pointer;
+
+			&:first-child {
+				top: calc(50% - 6px);
+			}
+
+			&:last-child {
+				top: auto;
+				bottom: calc(50% - 8px);
+			}
 		}
 
-
-		&._active {
+		&.active {
 			span {
 				transform: scale(0);
+				height: 1px;
+				width: 24px;
 
 				&:first-child {
-					transform: rotate(-45deg);
+					transform: translate(-50%, -50%) rotate(-45deg);
 					top: calc(50% - 1px);
 				}
 
 				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
+					transform: translate(-50%, -50%) rotate(45deg);
+					bottom: 50%;
 				}
 			}
 		}
