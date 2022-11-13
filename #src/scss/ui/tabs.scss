@@ -1,12 +1,131 @@
-//====================================================================================================
-._tabs {}
+//=========================Вспомогательние классы=======================================
+.tabs {}
 
-._tabs-item {}
+.tabs-item {}
 
-._tabs-block {
+.tabs-block {
 	display: none;
 
 	&.active {
 		display: block;
 	}
 }
+
+// ===================================================
+// =============tabs questions ======================
+.tabs-q {
+
+	&__nav {
+		display: inline-flex;
+		padding: 0px 0px 15px 0px;
+		align-items: center;
+		margin-bottom: -3px;
+		flex-wrap: wrap;
+
+		@media (max-width:($md4+px)) {
+			margin-bottom: -10px;
+		}
+	}
+
+	&__button {
+		font-size: 18px;
+		font-weight: 300;
+		color: $gray-01;
+		padding: 9px 15px 10px 15px;
+		background-color: $gray-light-01;
+		border-radius: 37px;
+		border: 1px solid transparent;
+		transition: all 0.3s ease-out 0s;
+		margin-bottom: 3px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $gray-light-02;
+				color: $black;
+			}
+		}
+
+		@media (max-width:($md1+px)) {
+			padding: 13.5px 15px 14.5px 15px;
+		}
+
+		@media (max-width:($md4+px)) {
+			margin-bottom: 10px;
+		}
+
+		&.active {
+			background: $gray-light-00 ;
+			border-color: $black;
+			color: $black;
+		}
+
+		&:not(:last-child) {
+			margin-right: 3px;
+
+			@media (max-width:($md4+px)) {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&__body {}
+
+	&__block {}
+}
+
+.tabs-contacts {
+	@media (max-width:($md3+px)) {
+		display: none;
+	}
+
+	&__nav {
+		display: flex;
+		padding: 0px 0px 10px 0px;
+	}
+
+	&__button {
+		padding: 5px 0px;
+		height: 34px;
+		font-weight: 300;
+		color: $gray-01;
+		position: relative;
+		transition: color 0.3s ease-out 0s;
+
+		&::before {
+			content: '';
+			width: 1px;
+			position: absolute;
+			height: 2px;
+			left: 0;
+			bottom: 2px;
+			background-color: $black;
+			transition: width 0.3s linear 0s;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $black;
+			}
+		}
+
+		&.active {
+			color: $black;
+
+			&::before {
+				width: 100%;
+			}
+		}
+
+		&:not(:last-child) {
+			margin: 0px 35px 0px 0px;
+		}
+	}
+
+	&__body {}
+
+	&__block {}
+
+	&__info {}
+}
+
+// ===================================================

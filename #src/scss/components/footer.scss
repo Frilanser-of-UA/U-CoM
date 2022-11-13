@@ -63,33 +63,7 @@
 		margin: 0px 0px 8px 0px;
 	}
 
-	&__links {
-		display: flex;
-
-		a {
-			color: $gray-00;
-			flex: 0 0 40px;
-			width: 40px;
-			height: 40px;
-			border: 1px solid $gray-sep;
-			border-radius: 25px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: color 0.3s ease 0s, border-color 0.3s ease 0s;
-
-			&:not(:last-child) {
-				margin: 0px 4px 0px 0px;
-			}
-
-			@media (any-hover:hover) {
-				&:hover {
-					color: $black;
-					border-color: $gray-01;
-				}
-			}
-		}
-	}
+	&__links {}
 
 	&__right {
 		flex: 0 1 800px;

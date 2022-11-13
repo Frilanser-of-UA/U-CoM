@@ -1,9 +1,6 @@
-.agreements {
+.questions {
 	padding: 50px 0;
-
-	&.gray-light {
-		background-color: $gray-light-00;
-	}
+	background-color: $gray-light-00;
 
 	&__container {}
 
@@ -13,24 +10,27 @@
 		@media (max-width:($md2+px)) {
 			display: block;
 		}
+
 	}
 
-	&__right {
+	&__left {
 		flex: 0 1 380px;
 		margin: 0px 100px 0px 0px;
 
 		@media (max-width:($md1+px)) {
 			margin: 0px 30px 0px 0px;
 		}
+
+		@media (max-width:($md2+px)) {
+			margin: 0;
+		}
 	}
 
 	&__title {}
 
-	&__left {
+	&__right {
 		flex: 0 1 720px;
 	}
 
-	&__items {}
-
-	&__link {}
+	&__tabs {}
 }

@@ -1,6 +1,10 @@
 .partners-our {
 	padding: 50px 0;
 
+	&.gray-light {
+		background-color: $gray-light-00;
+	}
+
 	&__container {}
 
 	&__top {}
