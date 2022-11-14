@@ -59,16 +59,7 @@ window.onload = function () {
 	}
 };
 // =========================================================
-const tableBody = document.querySelector('.table__body');
-if (tableBody) {
-	new SimpleBar(tableBody,
-		{
-			autoHide: false,
-			forceVisible: true | 'x' | 'y',
-			scrollbarMinSize: 25,
-			scrollbarMaxSize: 209,
-		});
-}
+
 
 const scrollUpp = document.querySelector('.button-up');
 if (scrollUpp) {

@@ -1,1 +1,0 @@
-@@include('libs/simplebar.js', {})
