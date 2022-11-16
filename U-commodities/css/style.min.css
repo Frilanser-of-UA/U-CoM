@@ -932,7 +932,7 @@ body.ie .ibg img {
   line-height: 125%;
   text-decoration: underline;
   color: #197FCC;
-  display: block;
+  display: inline-block;
 }
 
 .list__item {
@@ -958,6 +958,7 @@ body.ie .ibg img {
 .list-num__num {
   margin: 0px 3.5px 0px 0px;
   color: #64708B;
+  line-height: 125%;
 }
 .spollers-acordeon__label h3 {
   padding-top: 0;
@@ -2424,6 +2425,12 @@ body.ie .ibg img {
   display: flex;
   justify-content: space-between;
 }
+.links__row.faq {
+  justify-content: center;
+}
+.links__row.faq .links__column {
+  justify-content: center;
+}
 @media (max-width: 990.98px) {
   .links__row {
     flex-wrap: wrap;
@@ -3028,6 +3035,36 @@ body.ie .ibg img {
   .table-ecology tr:first-child {
     display: none;
   }
+}
+
+.text-info {
+  background-color: #F8FAFF;
+  padding: 50px 0;
+}
+.text-info__body {
+  display: flex;
+}
+@media (max-width: 990.98px) {
+  .text-info__body {
+    display: block;
+  }
+}
+.text-info__left {
+  flex: 0 1 380px;
+  margin: 0px 100px 0px 0px;
+}
+@media (max-width: 1277.98px) {
+  .text-info__left {
+    margin: 0px 30px 0px 0px;
+  }
+}
+@media (max-width: 990.98px) {
+  .text-info__left {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.text-info__right {
+  flex: 0 1 720px;
 }
 
 .page {

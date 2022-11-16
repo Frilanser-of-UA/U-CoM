@@ -18,6 +18,14 @@
 		display: flex;
 		justify-content: space-between;
 
+		&.faq {
+			justify-content: center;
+
+			.links__column {
+				justify-content: center;
+			}
+		}
+
 		@media (max-width:($md2+px)) {
 			flex-wrap: wrap;
 			margin: 0px 0px -10px 0px;

@@ -1,0 +1,35 @@
+.text-info {
+	background-color: $gray-light-00 ;
+	padding: 50px 0;
+
+	&__container {}
+
+	&__body {
+		display: flex;
+
+		@media (max-width:($md2+px)) {
+			display: block;
+		}
+	}
+
+	&__left {
+		flex: 0 1 380px;
+		margin: 0px 100px 0px 0px;
+
+		@media (max-width:($md1+px)) {
+			margin: 0px 30px 0px 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	&__title {}
+
+	&__text {}
+
+	&__right {
+		flex: 0 1 720px;
+	}
+}
