@@ -250,7 +250,6 @@ addEventListener("load", function () {
 	//  new PolySwitch(document.querySelector(".list"));
 })
 // ===============map item=========================
-
 document.querySelectorAll('.map-ua__item').forEach(function (link, index) {
 	link.addEventListener('click', function () {
 		let posItem = this.getBoundingClientRect();

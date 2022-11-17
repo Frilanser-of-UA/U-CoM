@@ -107,13 +107,10 @@
 					opacity: 1;
 				}
 
-				.menu__link {
-					span {
-						&::before {
-							width: 100%;
-						}
+				.menu__label {
+					&::before {
+						width: 100%;
 					}
-
 				}
 			}
 		}
@@ -128,6 +125,16 @@
 		padding: 21px 0;
 		display: flex;
 		align-items: center;
+
+		@media (min-width:($md2+px)) {
+			&.active {
+				.menu__label {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
 
 		@media (max-width:($md2+px)) {
 			padding: 15px 45px 15px 20px;

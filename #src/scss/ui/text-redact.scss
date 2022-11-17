@@ -1,0 +1,241 @@
+// ========================Заголовки============
+.title {
+	h1 {
+		font-size: 46px;
+		line-height: 100%;
+		letter-spacing: -0.02em;
+
+		@media (max-width:($md1+px)) {
+			font-size: 38px;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 30px;
+		}
+	}
+
+	h2 {
+		font-size: 34px;
+		line-height: 105%;
+		letter-spacing: -0.02em;
+		padding: 0px 0px 20px 0px;
+
+		@media (max-width:($md4+px)) {
+			font-size: 26px;
+			padding: 0px 0px 15px 0px;
+		}
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 110%;
+		padding: 15px 0 10px 0;
+	}
+
+	&_padding {
+		display: none;
+
+		@media (max-width:($md1+px)) {
+			display: block;
+		}
+
+		h2 {
+			padding: 60px 0px 10px 0px;
+
+			@media (max-width:($md4+px)) {
+				padding: 60px 0px 20px 0px;
+
+			}
+		}
+	}
+}
+
+.title-small {
+	color: $gray-01;
+	letter-spacing: -0.02em;
+	line-height: 110%;
+
+	h2 {
+		font-size: 26px;
+		padding: 30px 0 5px 0;
+	}
+
+	h3 {
+		font-size: 24px;
+		padding: 25px 0 5px 0;
+	}
+
+	h4 {
+		font-size: 22px;
+		padding: 15px 0 5px 0;
+	}
+
+	h5 {
+		font-size: 20px;
+		padding: 15px 0 5px 0;
+	}
+
+	h6 {
+		font-size: 16px;
+		padding: 10px 0 5px 0;
+	}
+}
+
+.title-large {
+	letter-spacing: -0.02em;
+	line-height: 110%;
+
+	h2 {
+		font-size: 30px;
+		padding: 50px 0 10px 0;
+	}
+
+	h3 {
+		font-size: 28px;
+		padding: 40px 0 10px 0;
+	}
+
+	h4 {
+		font-size: 26px;
+		padding: 15px 0 5px 0;
+	}
+
+	h5 {
+		font-size: 24px;
+		padding: 15px 0 5px 0;
+	}
+
+	h6 {
+		font-size: 22px;
+		padding: 15px 0 5px 0;
+	}
+}
+
+// =====================Текст==========================
+.text {
+	line-height: 125%;
+	color: $gray-01;
+	width: 100%;
+
+	p {
+		padding: 0px 0px 10px 0px;
+	}
+
+	&_italic {
+		font-style: italic;
+
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+
+	}
+}
+
+.text-large {
+	font-size: 18px;
+	line-height: 120%;
+	width: 100%;
+
+	p {
+		padding: 0px 0px 10px 0px;
+	}
+
+	&_italic {
+		font-style: italic;
+		font-weight: 500;
+
+		p {
+			padding: 0px 0px 20px 0px;
+		}
+
+	}
+}
+
+.text-bold {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 125%;
+	color: $black;
+
+	p {
+		padding: 0px 0px 10px 0px;
+	}
+}
+
+.text-large-bold {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 120%;
+	color: $black;
+
+	p {
+		padding: 0px 0px 15px 0px;
+	}
+}
+
+.text-link {
+	padding: 0px 0px 10px 0px;
+	line-height: 125%;
+	text-decoration: underline;
+	color: $text-link;
+	display: inline-block;
+}
+
+.text-large-link {
+	padding: 0px 0px 15px 0px;
+	font-size: 18px;
+	line-height: 120%;
+	text-decoration: underline;
+	color: $text-link;
+	display: inline-block;
+}
+
+// =====================Списки========================
+.list {
+
+	&__item {
+		display: flex;
+
+	}
+
+	&__text {}
+
+	&__icon {
+		width: 24px;
+		height: 20px;
+		background: $gray-light-01;
+		border-radius: 17px;
+		margin: 0px 2px 0px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::before {
+			font-size: 16px;
+		}
+	}
+}
+
+.list-num {
+
+	&__item {
+		display: flex;
+
+	}
+
+	&__num {
+		margin: 0px 3.5px 0px 0px;
+		color: $gray-01;
+		line-height: 125%;
+	}
+
+	&__text {}
+}
+
+// =====================Картинки========================
+.img {
+	padding: 0px 0px 426px 0px;
+	margin: 15px 0;
+}

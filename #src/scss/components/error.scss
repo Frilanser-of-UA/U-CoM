@@ -1,0 +1,43 @@
+.error {
+	background-color: $gray-light-00;
+	@extend %pad-100;
+
+	&__container {
+		max-width: 500px;
+	}
+
+	&__body {}
+
+	&__num {
+		font-size: 100px;
+		line-height: 105%;
+		letter-spacing: -0.02em;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__title {
+		margin: 0px 0px 20px 0px;
+		font-size: 28px;
+		line-height: 105%;
+		letter-spacing: -0.02em;
+	}
+
+	&__label {
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__list {
+		.list-num__num {
+			color: $black;
+		}
+	}
+
+	&__line {
+		margin: 20px 0px 0px 0px;
+		text-align: right;
+	}
+
+	.btn {
+		width: auto;
+	}
+}

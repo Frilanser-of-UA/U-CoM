@@ -227,3 +227,41 @@
 		}
 	}
 }
+
+.button-form-min {
+	height: 56px;
+	padding: 0 20px;
+	border-radius: 56px;
+	color: $white-100;
+	background-color: $black;
+	display: block;
+
+	@media (max-width:($md4+px)) {
+		padding: 10px;
+		height: 44px;
+
+	}
+
+	span {
+		&::before {
+			transition: transform 0.3s linear 0s;
+
+		}
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			span {
+				&::before {
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+
+	&:disabled {
+		pointer-events: none;
+		background: #F0F2F8;
+		color: $gray-00;
+	}
+}

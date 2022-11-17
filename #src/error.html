@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Error"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('./components/_header.html',{})
+		<main class="page">
+			<!-- =====================error==================== -->
+			<section class="error">
+				<div class="error__container container">
+					<div class="error__body">
+						<div class="error__num">404</div>
+						<div class="error__title">
+							<h1>Нажаль сторінки, яку ви шукаєте не існує.</h1>
+						</div>
+						<div class="error__label text">Чому це могло трапитись?</div>
+						<ul class="error__list list-num">
+							<li class="list-num__item">
+								<span class="list-num__num">01.</span>
+								<div class="list-num__text text">
+									<p>Сторінку було видалено системою - ви нічого не можете вдіяти з цим.</p>
+								</div>
+							</li>
+							<li class="list-num__item">
+								<span class="list-num__num">02.</span>
+								<div class="list-num__text text">
+									<p>Адресна строка містить помилки - перевірте чи правильне посилення.</p>
+								</div>
+							</li>
+						</ul>
+						<div class="error__line">
+							<a href="#" target="_blank" class="btn btn_yellow icon-arrow">На головну</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================================================== -->
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>
