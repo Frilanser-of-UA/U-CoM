@@ -12,8 +12,47 @@
 	&__input {}
 
 	&__label {
+		margin: 0px 2px 0px 8px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.02em;
+		color: #697389;
 
-		&_color {}
+		&.form-error {
+			color: #F5365C;
+		}
+	}
+
+	&__checkbox {
+		&:not(:last-child) {
+			margin: 0px 0px 15px 30px;
+		}
+	}
+
+	&__line {
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		// &:last-child {
+		// 	text-align: right;
+		// }
+	}
+
+	&__assistive {
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.4px;
+		margin: 0px 0px 0px 8px;
+	}
+
+	&__error {
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.4px;
+		color: #F5365C;
+		margin: 0px 0px 0px 8px;
 	}
 
 	&__button {

@@ -1,41 +1,63 @@
-<div class="popup popup_order">
+<div class="popup popup_form active">
 	<div class="popup__content">
 		<div class="popup__body">
-			<div class="popup__wrapper">
-				<h3 class="popup__title">Швидке замволення “Назва товару”</h3>
-				<div class="popup__text">Залиште ваші контактні данні, після цього ми вам зателефонуємо і підтвердимо ваше замовлення”</div>
-				<form id="form-popup" class="popup__form form-popup">
-					<div class="form-popup__row">
-						<div class="form-popup__img">
-							<img src="img/product/product-1.jpg" alt="Товар">
-						</div>
-						<div class="form-popup__item">
-							<div class="form-popup__label-text">Назва товару</div>
-							<div class="form-popup__value">Фасовка:<span>0.5л</span></div>
-						</div>
-						<div class="form-popup__price">1354 грн</div>
-					</div>
-					<div class="form-popup__line">
-						<input id="popup-text" class="form-popup__input input" type="text" name="Ім’я" placeholder="Ім’я">
-						<label for="popup-text" class="form-popup__label" for="text">Це поле обов’язкове до заповнення</label>
-					</div>
-					<div class="form-popup__line">
-						<input id="popup-tel" class="form-popup__input input" type="tel" name="Номер телефону" placeholder="Номер телефону">
-						<label for="popup-tel" class="form-popup__label" for="text">Це поле обов’язкове до заповнення</label>
-					</div>
-					<button form="form-popup" type="submit" class="form-popup__btn btn">Оформити замовлення</button>
-				</form>
-			</div>
-			<div class="popup__successfull successfull-popup">
-				<div class="successfull-popup__img">
-					<img src="img/categori/succesfull.svg" alt="Забраження успішного відправлення">
+			<div class="form-body">
+				<div class="form-body__logo">
+					<img src="img/header/logo.svg" alt="">
 				</div>
-				<div class="successfull-popup__text">Ви успішно заповнили форму! Ми зв’яжемося з вами найближчим часом</div>
-				<a href="#" class="successfull-popup__btn btn">Переглянути інші товари</a>
+				<div class="form-body__title">
+					Push your animation game to the next level
+				</div>
+				<div class="form-body__text text">Build new workflows integrating any piece of code or services through API. Focus on product and test new ideas as fast as possible. </div>
+				<div class="form-body__wrap">
+					<form action="#" id="form" class="form" method="POST" novalidate="novalidate">
+						<div class="form__line">
+							<label class="form__label" for="name">П.І.Б.</label>
+							<div class="form__shadow shadow">
+								<input id="name" class="form__input input" type="text" name="name" placeholder="П.І.Б.">
+							</div>
+							<div class="form__assistive">Assistive text</div>
+							<!-- <div class="form__error">Error text</div> -->
+						</div>
+						<div class="form__line">
+							<label class="form__label form-error" for="position">Посада</label>
+							<div class="form__shadow shadow">
+								<input id="position" class="form__input input form-error" type="text" name="position" placeholder="керівник проекту">
+							</div>
+							<!-- <div class="form__assistive">Assistive text</div> -->
+							<div class="form__error">Error text</div>
+						</div>
+						<div class="form__line">
+							<label class="form__label" for="tel">Номер терефону</label>
+							<div class="form__shadow shadow">
+								<input id="tel" class="form__input input" type="tel" name="tel" placeholder="+ 38 (067) 000 00 00">
+							</div>
+							<!-- <div class="form__assistive">Assistive text</div>
+							<div class="form__error">Error text</div> -->
+						</div>
+						<div class="form__line">
+							<label class="form__label" for="comment">Ваше повідомлення</label>
+							<div class="form__shadow shadow">
+								<textarea id="comment" class="form__input input" name="coment" placeholder="напишіть тут щось"></textarea>
+							</div>
+						</div>
+						<div class="form__line">
+							<label class="form__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<span class="checkbox__text"><span>I have read and agree to the <a href="#" target="_blank">privacy policy</a>, <a href="#" target="_blank">terms of service</a>, and <a href="#" target="_blank">community guidelines</a>.</span></span>
+							</label>
+							<label class="form__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<span class="checkbox__text"><span>I would like to receive news about annotation and Hypothesis I would like to receive news about annotation and Hypothesis</span></span>
+							</label>
+						</div>
+						<div class="form__line">
+							<button form="form" class="button-form" disabled>Відправити<span class="icon-arrow-btn"></span></button>
+						</div>
+					</form>
+				</div>
 			</div>
-			<div class="popup__close">
-				<img src="img/icons/close.svg" alt="Закрити">
-			</div>
+			<div class="form-body__close icon-cloze"></div>
 		</div>
 	</div>
 </div>

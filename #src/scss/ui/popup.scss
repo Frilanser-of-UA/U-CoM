@@ -11,6 +11,16 @@
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 
+	@media (max-width:($md3+px)) {
+		background: $white-100;
+	}
+
+	&_success {
+		@media (max-width:($md3+px)) {
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+
 	&::before {
 		content: "";
 		background: rgba(0, 0, 0, 0.7);
@@ -36,7 +46,7 @@
 		}
 	}
 
-	&._active {
+	&.active {
 		overflow: auto;
 		visibility: visible;
 
@@ -50,7 +60,6 @@
 		}
 	}
 
-	// .popup__content
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -63,71 +72,95 @@
 		align-items: center;
 	}
 
-	// .popup__body
 	&__body {
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		background-color: #fff;
-		padding: 50px;
-		width: 100%;
-		max-width: 530px;
-		border-radius: 8px;
+	}
+}
 
-		@media (max-width:($md3+px)) {
-			padding: 35px 15px;
-		}
+.form-body {
+	padding: 30px 30px 25px 30px;
+	width: 100%;
+	max-width: 600px;
 
-		&.not-visible {
-			.popup__wrapper {
-				display: none;
-			}
-
-			padding: 50px 35px;
-			max-width: 445px;
-
-			@media (max-width:($md3+px)) {
-				padding: 35px 15px;
-			}
-		}
+	@media (max-width:($md4+px)) {
+		padding: 30px 15px 25px 15px;
 	}
 
-	// .popup__close
-	&__close {
-		width: 42px;
-		height: 42px;
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		cursor: pointer;
+	&__logo {
+		padding: 9.5px 0;
+		width: 183px;
+		margin: 0px 0px 35px 0px;
 
 		img {
 			width: 100%;
 		}
-
-		@media (max-width:($md3+px)) {}
 	}
 
-	&_order {}
-
 	&__title {
-		font-weight: 700;
-		font-size: 27px;
-		line-height: 134%;
-		margin: 0px 55px 25px 0px;
-
-		@media (max-width:($md3+px)) {
-			font-size: 21px;
-		}
+		margin: 0px 0px 5px 0px;
+		font-size: 28px;
+		line-height: 110%;
 	}
 
 	&__text {
-		font-size: 18px;
-		line-height: 130%;
 		margin: 0px 0px 35px 0px;
 	}
 
-	&__form {}
+	&__wrap {}
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
 }
 
+.success-body {
+	padding: 20px;
+	width: 100%;
+	max-width: 430px;
+
+	&__icon {
+		margin: 10px auto 15px auto;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: #B7F2C4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		margin: 0px 0px 5px 0px;
+		font-size: 20px;
+		line-height: 110%;
+	}
+
+	&__text {
+		margin: 0px 0px 15px 0px;
+		color: $gray-01;
+		font-size: 14px;
+		line-height: 130%;
+	}
+
+	&__line {
+		text-align: right;
+	}
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+
+	.btn-min {
+		width: auto;
+	}
+}
 
 //======================================================================

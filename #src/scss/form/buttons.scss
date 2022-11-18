@@ -265,3 +265,33 @@
 		color: $gray-00;
 	}
 }
+
+.button-form {
+	padding: 15px 15px 10px 15px;
+	display: flex;
+	margin-left: auto;
+	background-color: $black;
+	color: $white-100;
+	border-radius: 57px;
+	height: 51px;
+	line-height: 130%;
+
+	span {
+		margin: 0px 0px 0px 10px;
+		transition: transform 0.3s linear 0s;
+	}
+
+	&:disabled {
+		background-color: #F0F2F8;
+		color: $gray-00;
+		pointer-events: none;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			span {
+				transform: translate(4px);
+			}
+		}
+	}
+}
