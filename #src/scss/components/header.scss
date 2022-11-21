@@ -3,6 +3,14 @@
 	border-bottom: 1px solid $gray-sep;
 	position: relative;
 
+	&.blue {
+		.menu__label {
+			&::before {
+				background-color: $blue;
+			}
+		}
+	}
+
 	@media (max-width:($md1+px)) {
 		border: none;
 	}

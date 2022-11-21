@@ -1,0 +1,89 @@
+.cards {
+	padding: 50px 0;
+
+	&__container {
+		&_width {
+			max-width: 1000px;
+		}
+	}
+
+	&__top {}
+
+	&__title {
+		@media (max-width:($md4+px)) {
+			h2 {
+				font-size: 34px;
+			}
+		}
+	}
+
+	&__body {}
+
+	&__items-block {}
+
+	&__items-grid-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		@media (max-width:($md2+px)) {
+			gap: 20px;
+		}
+
+		@media (max-width:($md4+px)) {
+			gap: 15px;
+		}
+	}
+
+	&__items-grid-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 40px 30px;
+
+		@media (max-width:($md1+px)) {
+			gap: 30px;
+		}
+
+		@media (max-width:($md2+px)) {
+			gap: 30px 20px;
+
+		}
+
+		@media (max-width:($md3+px)) {
+			grid-template-columns: 1fr 1fr;
+			gap: 40px 20px;
+		}
+
+		@media (max-width:($md4+px)) {
+			gap: 20px 15px;
+		}
+	}
+
+	&__items-grid-4 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 40px 20px;
+
+
+
+		@media (max-width:($md2+px)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		@media (max-width:($md3+px)) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (max-width:($md4+px)) {
+			gap: 20px 15px;
+		}
+	}
+
+	&__line {
+		padding: 40px 0px 0px 0px;
+	}
+
+	&__link {
+		width: auto;
+	}
+}

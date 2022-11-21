@@ -1,5 +1,30 @@
 .map {
-	padding: 100px 0px 0px 0px;
+	@extend %pad-100;
+
+	&.blue {
+		.map-ua__item {
+			@media (any-hover:hover) {
+				&:hover {
+					.map-ua__reg {
+						fill: $blue;
+					}
+				}
+			}
+
+			&.active {
+				.map-ua__reg {
+					fill: $blue;
+				}
+			}
+		}
+
+		.steps__num {
+			&.active {
+				background-color: $blue;
+				border-color: $blue;
+			}
+		}
+	}
 
 
 	&__container {}
@@ -31,8 +56,6 @@
 		}
 	}
 
-	&__items {}
-
 	&__item {}
 
 	&__line {
@@ -50,32 +73,6 @@
 
 .map-ua {
 	position: relative;
-
-	&.blue {
-		.map-ua__item {
-			@media (any-hover:hover) {
-				&:hover {
-					.map-ua__reg {
-						fill: $yellow;
-					}
-				}
-			}
-
-			&.active {
-				@media (any-hover:hover) {
-					&:hover {
-						.map-ua__reg {
-							fill: $blue;
-						}
-					}
-				}
-
-				.map-ua__reg {
-					fill: $blue;
-				}
-			}
-		}
-	}
 
 	@media (max-width:($md3+px)) {
 		overflow-x: auto;
@@ -108,7 +105,7 @@
 		@media (any-hover:hover) {
 			&:hover {
 				.map-ua__reg {
-					fill: $blue;
+					fill: $yellow;
 				}
 
 				.map-ua__name {
@@ -118,18 +115,6 @@
 		}
 
 		&.active {
-			@media (any-hover:hover) {
-				&:hover {
-					.map-ua__reg {
-						fill: $yellow;
-					}
-
-					.map-ua__name {
-						fill: $white-100;
-					}
-				}
-			}
-
 			.map-ua__reg {
 				fill: $yellow;
 			}
@@ -144,17 +129,18 @@
 }
 
 
+.steps {
+	&__item {
+		display: flex;
+		padding: 0px 0px 10px 0px;
 
-.item-map {
-	display: flex;
-	padding: 0px 0px 10px 0px;
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 5px 0px;
+		}
 
-	@media (max-width:($md4+px)) {
-		padding: 0px 0px 5px 0px;
-	}
-
-	&:not(:last-child) {
-		margin: 0px 0px 10px 0px;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	&__number {
@@ -163,15 +149,6 @@
 
 		@media (max-width:($md4+px)) {
 			flex: 0 0 33px;
-		}
-
-		&.blue {
-			.item-map__num {
-				&.active {
-					background-color: $blue;
-					border-color: $blue;
-				}
-			}
 		}
 	}
 

@@ -3,3 +3,4 @@
 @@include('files/menu.js', {})
 @@include('files/spollers.js', {})
 @@include('files/tabs.js', {})
+@@include('files/sliders.js', {})

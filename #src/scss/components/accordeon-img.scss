@@ -1,11 +1,18 @@
 .accordeon-img {
 	@extend %pad-100;
 	background-color: $gray-light-00;
-	// .accordeon-img__conteiner
+
+	&.blue {
+		.spollers-acordeon__title {
+			&::before {
+				background-color: $blue;
+			}
+		}
+	}
+
+
 
 	&__conteiner {}
-
-	// .accordeon-img__body
 
 	&__body {
 		min-height: 620px;
@@ -19,8 +26,6 @@
 			min-height: auto;
 		}
 	}
-
-	// .accordeon-img__right
 
 	&__right {
 		max-width: 380px;

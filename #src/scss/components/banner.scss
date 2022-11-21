@@ -1,0 +1,54 @@
+.banner {
+
+	// .banner__container
+
+	&__container {}
+
+	// .banner__body
+
+	&__body {}
+
+	// .banner__img
+
+	&__img {
+		padding: 0px 0px 58.5% 0px;
+
+		@media (max-width:($md1+px)) {
+			padding: 0px 0px 68.68% 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px 73.8% 0px;
+		}
+
+		@media (max-width:($md3+px)) {
+			padding: 0px 0px 150.6% 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 142.75% 0px;
+		}
+	}
+
+	&__img-large {
+		max-width: 1920px;
+		margin: 0 auto;
+		padding: 0px 0px calc((722 / 1440) * 100%) 0px;
+
+		@media (max-width:($md1+px)) {
+			padding: 0px 0px calc((651 / 991) * 100%) 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px calc((555 / 768) * 100%) 0px;
+		}
+
+		@media (max-width:($md3+px)) {
+			padding: 0px 0px calc((984 / 568) * 100%) 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px calc((513 / 320) * 100%) 0px;
+		}
+	}
+}

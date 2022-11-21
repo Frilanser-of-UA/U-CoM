@@ -103,3 +103,212 @@
 		height: 95px;
 	}
 }
+
+.card {
+
+	&__title {
+		font-size: 28px;
+		line-height: 110%;
+		letter-spacing: -0.02em;
+		margin: 0px 0px 15px 0px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		max-height: 93px;
+
+		@media (max-width:($md4+px)) {
+			margin: 0px 0px 5px 0px;
+		}
+	}
+
+	&__img {
+		padding: 0px 0px 568px 0px;
+		margin: 0px 0px 10px 0px;
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px calc((422 / 668) * 100%) 0px;
+		}
+
+		@media (max-width:($md3+px)) {
+			padding: 0px 0px calc((320 / 508) * 100%) 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px calc((181 / 290) * 100%) 0px;
+			margin: 0px 0px 5.5px 0px;
+		}
+	}
+
+	&__line {
+		text-align: right;
+
+		@media (max-width:($md4+px)) {
+			text-align: left;
+		}
+	}
+
+	&__link {
+		width: auto;
+	}
+}
+
+.card-02 {
+
+	&__title {
+		margin: 0px 0px 4px 0px;
+		font-size: 22px;
+		line-height: 110%;
+		letter-spacing: -0.02em;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		max-height: 75px;
+
+		@media (max-width:($md2+px)) {
+			font-size: 16px;
+			max-height: 55px;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 14px;
+			max-height: 47px;
+
+		}
+	}
+
+	&__img {
+		margin: 0px 0px 4px 0px;
+		padding: 0px 0px calc((364 / 585) * 100%) 0px;
+	}
+
+	&__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 8;
+		max-height: 164px;
+		margin: 0px 0px 10px 0px;
+
+		p {
+			padding: 0;
+		}
+
+		@media (max-width:($md3+px)) {
+			font-size: 14px;
+			max-height: 154px;
+		}
+	}
+
+	&__line {}
+
+	&__link {
+		width: auto;
+	}
+}
+
+.card-03 {
+
+	&__title {
+		margin: 0px 0px 3px 0px;
+		font-size: 19px;
+		line-height: 110%;
+		letter-spacing: -0.02em;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		max-height: 63px;
+
+		@media (max-width:($md2+px)) {
+			font-size: 16px;
+			max-height: 55px;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 14px;
+			max-height: 47px;
+		}
+	}
+
+	&__img {
+		margin: 0px 0px 4px 0px;
+		padding: 0px 0px calc((239 / 380) * 100%) 0px;
+	}
+
+	&__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 8;
+		max-height: 154px;
+		margin: 0px 0px 10px 0px;
+		font-size: 14px;
+
+		p {
+			padding: 0;
+		}
+	}
+
+	&__line {}
+
+	&__link {
+		width: auto;
+	}
+}
+
+.card-04 {
+
+	&__title {
+		margin: 0px 0px 5px 0px;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.02em;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		max-height: 55px;
+
+		@media (max-width:($md4+px)) {
+			font-size: 14px;
+			max-height: 47px;
+		}
+	}
+
+	&__img {
+		margin: 0px 0px 5px 0px;
+		padding: 0px 0px calc((181 / 285) * 100%) 0px;
+	}
+
+	&__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 8;
+		max-height: 154px;
+		margin: 0px 0px 10px 0px;
+		font-size: 14px;
+
+		p {
+			padding: 0;
+		}
+	}
+
+	&__line {}
+
+	&__link {
+		width: auto;
+	}
+}

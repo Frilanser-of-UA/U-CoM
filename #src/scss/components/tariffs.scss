@@ -56,11 +56,6 @@
 	&__line-right-small {
 		padding: 10px 0px 0px 0px;
 		text-align: right;
-		display: none;
-
-		@media (max-width:($md1+px)) {
-			display: block;
-		}
 	}
 
 	&__spollers {}

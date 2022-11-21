@@ -1,0 +1,71 @@
+.imgs {
+	padding: 50px 0;
+
+	&__top {}
+
+	&__title {}
+
+	&__body {}
+
+	&__row {}
+
+	&__img {
+		padding: 0px 0px 560px 0px;
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px 448px 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px 332px 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 212px 0px;
+		}
+	}
+
+	&__img-high {
+		height: 545px;
+
+		@media (max-width:($md1+px)) {
+			height: 442px;
+		}
+
+		@media (max-width:($md2+px)) {
+			height: 348px;
+		}
+
+		@media (max-width:($md3+px)) {
+			height: 732px;
+		}
+
+		@media (max-width:($md4+px)) {
+			height: 423px;
+		}
+	}
+
+	&__img-small {
+		height: 364px;
+
+		@media (max-width:($md1+px)) {
+			height: 295px;
+		}
+
+		@media (max-width:($md2+px)) {
+			height: 232px;
+		}
+
+		@media (max-width:($md3+px)) {
+			height: 590px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 287px 0px;
+		}
+	}
+
+	&__line {
+		padding: 10px 0px 0px 0px;
+	}
+}
