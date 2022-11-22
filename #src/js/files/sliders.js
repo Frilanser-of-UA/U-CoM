@@ -1,5 +1,4 @@
 
-
 let gallerySlider = new Swiper('.gallery__slider', {
 	touchStartPreventDefault: false,
 	observer: true,
@@ -23,7 +22,6 @@ let gallerySlider = new Swiper('.gallery__slider', {
 		},
 	}
 });
-
 let gallerySliderCenter = new Swiper('.gallery__slider-center', {
 	touchStartPreventDefault: false,
 	observer: true,

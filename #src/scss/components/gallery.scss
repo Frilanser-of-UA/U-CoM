@@ -118,6 +118,16 @@
 	&__line {
 		padding: 20px 0px 0px 0px;
 	}
+
+	&__link {
+		@media (max-width:($md4+px)) {
+			width: auto;
+		}
+
+		&:not(:last-child) {
+			margin: 0px 10px 0px 0px;
+		}
+	}
 }
 
 

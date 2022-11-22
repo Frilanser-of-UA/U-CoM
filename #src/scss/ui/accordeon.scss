@@ -34,7 +34,9 @@
 			}
 
 			span {
-				transform: matrix(1, 0, 0, -1, 0, 0);
+				&::before {
+					transform: matrix(1, 0, 0, -1, 0, 0);
+				}
 			}
 		}
 
@@ -57,8 +59,14 @@
 
 		span {
 			color: $gray-01;
-			transition: transform 0.4s ease 0s, color 0.4s ease 0s;
 			margin: 0px 0px 0px 15px;
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+
+			&::before {
+				transition: transform 0.4s ease 0s, color 0.4s ease 0s;
+			}
 		}
 	}
 
