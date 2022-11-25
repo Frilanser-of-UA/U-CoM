@@ -884,13 +884,25 @@ textarea.input {
   font-size: 16px;
 }
 
-.list-num__item {
-  display: flex;
+.list-num {
+  counter-reset: li;
 }
-.list-num__num {
-  margin: 0px 3.5px 0px 0px;
+.list-num__item {
+  list-style: none;
+  position: relative;
+  padding: 0px 0px 0px 26px;
+}
+.list-num__item::before {
+  counter-increment: li;
+  content: "" counters(li, "") ".";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  text-align: right;
   color: #64708B;
-  line-height: 125%;
+}
+.list-num__item:nth-child(-n+9)::before {
+  content: "0" counters(li, "") ".";
 }
 .img {
   padding: 0px 0px 426px 0px;
@@ -1027,8 +1039,8 @@ body.ie .ibg img {
 @media (max-width: 1277.98px) {
   .article-news__text {
     font-size: 14px;
-    max-height: 52px;
-    height: 52px;
+    max-height: 50px;
+    height: 50px;
   }
 }
 .article-news__text-long {
@@ -2559,7 +2571,7 @@ body.ie .ibg img {
 }
 @media (max-width: 567.98px) {
   .puzzles__links {
-    border-top: 1px solid #F8FAFF;
+    border-top: 1px solid #E6EBF8;
   }
 }
 @media (max-width: 567.98px) {
@@ -2582,8 +2594,18 @@ body.ie .ibg img {
   color: #0E283D;
   overflow: hidden;
 }
+@media (max-width: 567.98px) {
+  .puzzles__link-btn {
+    background-color: #F8FAFF;
+  }
+}
 .puzzles__link-btn:not(:first-child) {
   border-top: 1px solid #F8FAFF;
+}
+@media (max-width: 567.98px) {
+  .puzzles__link-btn:not(:first-child) {
+    border-top: 1px solid #E6EBF8;
+  }
 }
 @media (max-width: 567.98px) {
   .puzzles__link-btn {
@@ -2598,6 +2620,11 @@ body.ie .ibg img {
 }
 .puzzles__link-btn span::after {
   background: linear-gradient(270deg, rgba(230, 235, 248, 0) 0%, #E6EBF8 55.31%, rgba(230, 235, 248, 0) 100%);
+}
+@media (max-width: 567.98px) {
+  .puzzles__link-btn span::after {
+    background: none;
+  }
 }
 .puzzles__link-btn span.icon-arrow {
   width: auto;
@@ -3298,6 +3325,11 @@ body.ie .ibg img {
 @media (max-width: 1277.98px) {
   .agreements__right {
     margin: 0px 30px 0px 0px;
+  }
+}
+@media (max-width: 990.98px) {
+  .agreements__right {
+    margin: 0;
   }
 }
 .agreements__left {
@@ -4001,6 +4033,9 @@ body.ie .ibg img {
 
 .error {
   background-color: #F8FAFF;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
 }
 .error__container {
   max-width: 500px;
@@ -4661,6 +4696,8 @@ body.ie .ibg img {
 
 .page {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-wrap-home, .advantages, .accordeon-img, .numbers, .map, .partners, .simple, .links, .error, .cta {

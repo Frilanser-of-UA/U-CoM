@@ -22,6 +22,10 @@
 		@media (max-width:($md1+px)) {
 			margin: 0px 30px 0px 0px;
 		}
+
+		@media (max-width:($md2+px)) {
+			margin: 0;
+		}
 	}
 
 	&__title {}

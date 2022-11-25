@@ -223,16 +223,28 @@
 }
 
 .list-num {
+	counter-reset: li;
 
 	&__item {
-		display: flex;
+		list-style: none;
+		position: relative;
+		padding: 0px 0px 0px 26px;
 
-	}
+		&::before {
+			counter-increment: li;
+			content: "" counters(li, '')'.';
+			position: absolute;
+			left: 0px;
+			top: 0;
+			text-align: right;
+			color: $gray-01;
+		}
 
-	&__num {
-		margin: 0px 3.5px 0px 0px;
-		color: $gray-01;
-		line-height: 125%;
+		&:nth-child(-n+9) {
+			&::before {
+				content: "0" counters(li, '')'.';
+			}
+		}
 	}
 
 	&__text {}

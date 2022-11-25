@@ -174,7 +174,7 @@
 		flex-direction: column;
 
 		@media (max-width:($md4+px)) {
-			border-top: 1px solid $gray-light-00;
+			border-top: 1px solid $gray-light-03;
 		}
 
 		&_border {
@@ -199,8 +199,16 @@
 		color: $black;
 		overflow: hidden;
 
+		@media (max-width:($md4+px)) {
+			background-color: $gray-light-00;
+		}
+
 		&:not(:first-child) {
 			border-top: 1px solid $gray-light-00;
+
+			@media (max-width:($md4+px)) {
+				border-top: 1px solid $gray-light-03;
+			}
 		}
 
 		@media (max-width:($md4+px)) {
@@ -216,6 +224,10 @@
 			&::after {
 				@extend %hover;
 				background: linear-gradient(270deg, rgba(230, 235, 248, 0) 0%, #E6EBF8 55.31%, rgba(230, 235, 248, 0) 100%);
+
+				@media (max-width:($md4+px)) {
+					background: none;
+				}
 			}
 
 			&.icon-arrow {
