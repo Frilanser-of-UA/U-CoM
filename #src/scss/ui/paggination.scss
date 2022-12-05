@@ -7,6 +7,7 @@
 		border-radius: 50%;
 		width: 32px;
 		height: 32px;
+		color: $black ;
 
 		@media (any-hover:hover) {
 			&:hover {
@@ -20,7 +21,6 @@
 
 		&:disabled {
 			color: #A4AFC8;
-			transform: matrix(0, -1, -1, 0, 0, 0);
 			pointer-events: none;
 		}
 

@@ -1,6 +1,10 @@
 .simple {
 	@extend %pad-100;
 
+	&.gray-light {
+		background-color: $gray-light-00;
+	}
+
 	&__container {}
 
 	&__body {

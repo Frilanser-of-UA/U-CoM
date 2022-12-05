@@ -11,6 +11,7 @@ textarea {
 .shadow {
 	padding: 3px;
 	background-color: transparent;
+	flex: 1 1 auto;
 }
 
 .input {
@@ -29,10 +30,6 @@ textarea {
 	@media (any-hover:hover) {
 		&:hover {
 			border-color: #F5365C;
-
-			&::placeholder {
-				color: rgba(245, 54, 92, 0.66);
-			}
 		}
 	}
 
@@ -72,10 +69,22 @@ textarea {
 	&.form-error {
 		border-color: rgba(245, 54, 92, 0.66);
 
+		@media (any-hover:hover) {
+			&:hover {
+				&::placeholder {
+					color: rgba(245, 54, 92, 0.66);
+				}
+			}
+		}
+
 		&:focus {
 			-webkit-box-shadow: 0px 0px 0px 3px rgba(245, 54, 92, 0.22);
 			-moz-box-shadow: 0px 0px 0px 3px rgba(245, 54, 92, 0.22);
 			box-shadow: 0px 0px 0px 3px rgba(245, 54, 92, 0.22);
+
+			&::placeholder {
+				color: rgba(245, 54, 92, 0.66);
+			}
 		}
 
 		&::placeholder {
