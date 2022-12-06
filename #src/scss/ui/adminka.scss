@@ -1,0 +1,357 @@
+// ============== Сетка для редактора, конструктора и расположение контента====
+.block {
+	.text-info__body {
+		display: block;
+	}
+
+	.video__body {
+		display: block;
+
+		.player {
+			height: 560px;
+
+			@media (max-width:($md2+px)) {
+				height: auto;
+			}
+
+			@media (max-width:($md2+px)) {
+				padding: 0px 0px 66.4% 0px;
+
+			}
+
+			@media (max-width:($md3+px)) {
+				padding: 0px 0px 61.6% 0px;
+			}
+
+			@media (max-width:($md4+px)) {
+				padding: 0px 0px 68.7% 0px;
+			}
+		}
+
+	}
+
+	.text-info__left {
+		margin: 0;
+	}
+
+	.imgs__container {
+		max-width: 1000px;
+	}
+
+	.tariffs__body {
+		display: block;
+	}
+}
+
+.two-col {
+	.text-info__right {
+		display: flex;
+
+		@media (max-width:($md2+px)) {
+			display: block;
+		}
+	}
+
+	.tariffs__left {
+		flex: 0 1 585px;
+		margin: 0px 30px 0px 0px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	.tariffs__right {
+		flex: 0 1 585px;
+	}
+}
+
+.img-50 {
+	.text-info__left {
+		flex: 0 1 550px;
+	}
+
+	.text-info__right {
+		flex: 0 1 550px;
+	}
+}
+
+.img-large {
+	.text-info__left {
+		flex: 0 1 720px;
+	}
+
+	.text-info__right {
+		flex: 0 1 380px;
+	}
+}
+
+.img-large-etaps {
+	.text-info__left {
+		flex: 0 1 720px;
+
+		@media (max-width:($md1+px)) {
+			flex: 0 1 50%;
+		}
+	}
+
+	.text-info__right {
+		flex: 0 1 380px;
+
+		@media (max-width:($md1+px)) {
+			flex: 0 1 50%;
+		}
+	}
+}
+
+.grid-img {
+	.imgs__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+
+		@media (max-width:($md3+px)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.imgs__line {
+		padding: 20px 0px 0px 0px;
+	}
+}
+
+.center {
+	.gallery__wrapper {
+		align-items: center;
+	}
+}
+
+.revers {
+	.text-info__body {
+		flex-direction: row-reverse;
+	}
+
+	.text-info__right {
+		margin-right: 100px;
+
+		@media (max-width:($md1+px)) {
+			margin-right: 30px;
+		}
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	.text-info__left {
+
+		margin: 0px;
+
+		@media (max-width:($md1+px)) {
+			margin: 0px;
+		}
+
+		@media (max-width:($md2+px)) {
+			margin: 0px;
+		}
+	}
+
+}
+
+.img-autoheight {
+	.text-info__img-left {
+		height: 100%;
+	}
+}
+
+// ============== Обвертка для текстового редактора ==========
+.content-text {
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	ul {
+		li {
+			display: flex;
+
+			&::before {
+				content: "\e903";
+				font-size: 16px;
+				font-family: "icons";
+				width: 24px;
+				height: 20px;
+				background: $gray-light-01;
+				border-radius: 17px;
+				margin: 0px 7px 0px 0px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: li;
+
+		li {
+			list-style: none;
+			display: flex;
+
+			&::before {
+				counter-increment: li;
+				content: "" counters(li, '')'.';
+				margin: 0px 7px 0px 0px;
+				left: 0px;
+				top: 0;
+				text-align: right;
+				color: $gray-01;
+				max-height: 20px;
+				flex: 0 1 24px;
+				max-width: 24px;
+			}
+
+			&:nth-child(-n+9) {
+				&::before {
+					content: "0" counters(li, '')'.';
+				}
+			}
+		}
+	}
+
+	p {
+		padding: 0px 0px 10px 0px;
+		width: 100%;
+
+		b {
+			font-weight: 500;
+			color: $black;
+		}
+
+		i {
+			color: $black;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+		color: $text-link;
+		display: inline-block;
+	}
+
+	// ============== Маленький текст и заголовки ==========
+	&.small {
+
+		p {
+			line-height: 125%;
+		}
+
+		a {
+			line-height: 125%;
+			padding: 0px 0px 10px 0px;
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			letter-spacing: -0.02em;
+			line-height: 110%;
+		}
+
+		h2 {
+			font-size: 26px;
+			padding: 30px 0 5px 0;
+		}
+
+		h3 {
+			font-size: 24px;
+			padding: 25px 0 5px 0;
+		}
+
+		h4 {
+			font-size: 22px;
+			padding: 15px 0 5px 0;
+		}
+
+		h5 {
+			font-size: 20px;
+			padding: 15px 0 5px 0;
+		}
+
+		h6 {
+			font-size: 16px;
+			padding: 10px 0 5px 0;
+		}
+	}
+
+	&.large {
+
+		p {
+			line-height: 120%;
+			font-size: 18px;
+
+			i {
+				font-weight: 500;
+			}
+		}
+
+		a {
+			line-height: 120%;
+			font-size: 18px;
+			padding: 0px 0px 15px 0px;
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			letter-spacing: -0.02em;
+			line-height: 110%;
+		}
+
+		h2 {
+			font-size: 30px;
+			padding: 50px 0 10px 0;
+		}
+
+		h3 {
+			font-size: 28px;
+			padding: 40px 0 10px 0;
+		}
+
+		h4 {
+			font-size: 26px;
+			padding: 15px 0 5px 0;
+		}
+
+		h5 {
+			font-size: 24px;
+			padding: 15px 0 5px 0;
+		}
+
+		h6 {
+			font-size: 22px;
+			padding: 15px 0 5px 0;
+		}
+	}
+
+
+
+	// ============== Черный цвет текста в редакторе ==========
+	&.gray {
+		p {
+			color: $gray-01;
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: $gray-01;
+		}
+	}
+}
