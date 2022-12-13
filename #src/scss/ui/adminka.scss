@@ -191,15 +191,16 @@
 		}
 	}
 
-	ol {
+	>ol {
 		counter-reset: li;
 
-		li {
+
+		>li {
 			list-style: none;
-			display: flex;
 
 			&::before {
 				counter-increment: li;
+				// content: counters(li, '', decimal-leading-zero)'.';
 				content: "" counters(li, '')'.';
 				margin: 0px 7px 0px 0px;
 				left: 0px;

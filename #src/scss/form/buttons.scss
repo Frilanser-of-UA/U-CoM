@@ -106,6 +106,65 @@
 	}
 }
 
+.btn-link-icon {
+	font-size: 16px;
+	line-height: 130%;
+	color: $gray-01;
+	display: inline-flex;
+	transition: color 0.3s ease 0s;
+	white-space: nowrap;
+
+	.icon {
+		&::before {
+			font-size: 24px;
+		}
+	}
+
+	.label {
+		position: relative;
+		display: block;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			background-color: $gray-01;
+			height: 1px;
+			left: 0;
+			bottom: 4px;
+			transition: background-color 0.3s ease 0s;
+		}
+	}
+
+	&_size {
+		font-size: 14px;
+
+		.label {
+			&::before {
+				bottom: 2.5px;
+			}
+		}
+
+		.icon {
+			&::before {
+				font-size: 20px;
+			}
+		}
+	}
+
+
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: $text-link;
+
+			&::before {
+				background-color: $text-link;
+			}
+		}
+	}
+}
+
 .btn {
 	display: inline-flex;
 	flex-direction: row-reverse;
